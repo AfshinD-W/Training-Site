@@ -1,5 +1,6 @@
 import { Formik, Form, Field } from "formik"
 import { FC } from "react"
+import Input from "../../app/shared/Input"
 
 const registerVlues = {
     username: '',
@@ -19,22 +20,10 @@ const Register: FC = () => {
             }}
         >
             <Form>
-                <div>
-                    <label>username</label>
-                    <Field name="username" type="text" />
-                </div>
-                <div>
-                    <label>email</label>
-                    <Field name="email" type="email" />
-                </div>
-                <div>
-                    <label>password</label>
-                    <Field name="password" type="password" />
-                </div>
-                <div>
-                    <label>confirm password</label>
-                    <Field name="confirmpassword" type="password" />
-                </div>
+                <Input label="username" name="username" />
+                <Input label="email" name="email" type="email" />
+                <Input label="password" name="password" />
+                <Input label="confirm password" name="confirmpassword" />
                 <button type="submit">singin</button>
             </Form>
         </Formik>
